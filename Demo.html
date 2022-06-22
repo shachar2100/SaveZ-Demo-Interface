@@ -1,0 +1,143 @@
+<!-----   
+* LineGraph -> The LineGraph that will be on the Interface
+* Video Used for Refrence -> https://www.youtube.com/watch?v=_KVYh9LM0eE
+* Written By Shachar Habusha
+* Date Started: 8/8/2020
+------>
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Dem0-SaveZ</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- import jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script
+   src="http://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
+<!--import Chart.js--->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+
+<!--import Bootstrap--->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!----structure.css-->	
+<link rel="stylesheet" href="C:\Users\shach\Desktop\Dem0-SaveZ\structure.css">
+
+<!----buttonStyle.css-->	
+<link rel="stylesheet" href="C:\Users\shach\Desktop\Dem0-SaveZ\buttonStyle.css">
+
+<!-- tableStyle.css -->
+<link rel="stylesheet" href="C:\Users\shach\Desktop\Dem0-SaveZ\tableStyle.css">
+	
+
+
+<head>
+		
+		
+	</head>
+
+
+	<body>	
+		
+		<!---Bathroom Drop Down Buttons -->
+		<select id="dropDown" onchange="myBathroom()" class="ui dropdown , button">
+			<option value="girl">Girls Bathroom</option>
+			<option value="boy">Boys Bathroom</option>
+			<option value="all" selected>All Bathroom</option> 
+		</select>
+
+		<!---Date Change Buttons -->
+		<button onclick="oneDay()" class="button" >1 Day</button>
+		<button onclick="fiveDay()" class="button" >5 Day</button>
+		<button onclick="oneMonth()" class="button" >1 Month</button>
+		<button onclick="sixMonth()" class="button" >6 Month</button>
+		<button onclick="max()" class="button" >Max</button>
+
+		<!--Current Date-->
+		<div class="grid-Date">	
+			<div class="item1">Date:</div>			
+			<div class="item2"  id="dateAboveChart" ></div>
+				
+
+			<div class="item3">
+
+				<!--Next and Previous Buttons-->
+				<a onclick="previousDay()" class="previous round">&#8249;</a>
+				<a onclick="nextDay()"  class="next round">&#8250;</a>	
+			</div>				
+							
+		</div>	
+		
+		<!--Chart-->
+		<canvas id="myChart" ></canvas>		
+
+		<!-- Time schedule view for one day Chart -->
+		<div class="container-firstDay">
+			
+			<div class="container-firstDay-item">Period 1 or 2</div>
+			<div class="container-firstDay-item">Break</div>
+			<div class="container-firstDay-item">Period 3</div>
+			<div class="container-firstDay-item">Break</div>
+			<div class="container-firstDay-item">Period 5 or 4</div>
+			<div class="container-firstDay-item">Lunch</div>
+			<div class="container-firstDay-item">Period 7 or 6</div>
+					
+		</div>
+		
+	
+		<table class="table table-fluid" id="myTable">
+			<thead>
+				<tr>
+					<th>location</th>
+					<th>time</th>
+					<th>date</th>
+  
+				</tr>
+				
+			</thead>
+  
+	
+			<tbody id="tableData">
+			
+				<!-- Code from JavaScript -->
+			</tbody>
+			
+		</table>
+
+		<script>
+
+		  //jquery datable set up
+
+		  $(document).ready( function () {
+			  $('#myTable').DataTable();
+		  } );
+		</script>
+		
+	
+
+		
+
+	
+
+		<!----button.js-->
+		<script src="C:\Users\shach\Desktop\Dem0-SaveZ\button.js"></script>
+
+		<!----data.js-->
+		<script src="C:\Users\shach\Desktop\Dem0-SaveZ\data.js"></script>
+	
+		<!----chart.js-->
+		<script src="C:\Users\shach\Desktop\Dem0-SaveZ\chart.js"></script>		
+
+		<!-- table.js -->
+		<script src="C:\Users\shach\Desktop\Dem0-SaveZ\table.js"></script>	
+		
+	</body>
+
+
+</html>

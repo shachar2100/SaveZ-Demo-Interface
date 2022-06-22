@@ -1,0 +1,42 @@
+table{
+    
+    font-family: 'Montserrat';font-size: 20px; 
+        
+        
+
+    /* no gap */
+    border-collapse: collapse; 
+
+    /*Centuring in the middle*/           
+    margin-left:auto;
+    margin-right:auto;
+
+    /*length of Table*/
+    width: 65%;
+}
+
+td{
+    border: 1px solid #cccccc;
+    padding: 10px;
+}
+
+th{
+    font-weight: bold;
+    text-transform: uppercase;
+ 
+    border: 1px solid #0a0a0a;
+}
+
+tr:n-child(even){
+    background-color: #dddddd;
+}
+
+ /* Hovering effect */
+
+/* tr:hover{
+    Blue Color Used In all Website 
+    background-color: rgb(30, 115, 190);
+    color: rgb(30, 115, 190);;
+}  
+  */
+

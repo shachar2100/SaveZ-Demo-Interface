@@ -1,0 +1,33 @@
+<!-----   
+* dropDown-> Testing for demo code for drop down button :)
+* Video Used for Refrence:
+* ->https://www.w3schools.com/tags/att_option_selected.asp 
+* ->https://www.w3schools.com/Jsref/event_onchange.asp
+* Written By Shachar Habusha
+* Date Started: 11/9/2020
+------>
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Select a new car from the list.</p>
+
+<select id="dropDown" onchange="myBathroom()">
+  <option value="girl">Girls Bathroom</option>
+  <option value="boy">Boys Bathroom</option>
+  <option value="all" selected>All Bathroom</option> 
+</select>
+
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+<p id="demo"></p>
+
+<script>
+function myBathroom() {
+  var x = document.getElementById("dropDown").value;
+  document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+/**
+* Holds the Chart
+**/
+body{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-right:30px ;
+    padding-left:30px ; */
+}
+
+/**
+* Holds the Buttons
+**/
+.homeDate {
+    display: inline-block;
+    text-align: left; 
+}
+
+
+/*
+* Holds the date above the chart :) 
+*/
+.grid-Date {
+    display: grid;
+    grid-template-columns: 40px 140px auto  50px  ;
+    grid-gap: 0px;
+    padding: 5px;
+    text-align: right; 
+    font-size: 15px;
+}
+
+
+
+/*
+* Holds the time for the first day :) 
+*/
+
+.container-firstDay {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-gap: 0px 0px;
+    grid-template-columns: 150px 32px 83px 32px 150px 55px 150px;   
+       
+    padding-bottom: 15px ;
+}
+.container-firstDay-item{
+  
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-top: white;
+    padding: 0px;
+    font-size: 12px;
+    text-align: center;
+}
+
